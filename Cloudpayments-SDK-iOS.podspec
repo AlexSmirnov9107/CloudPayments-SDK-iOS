@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/cloudpayments/SDK-iOS/SDK-iOS.git", :tag => "#{spec.version}" }
   spec.source_files  = 'sdk/sdk/**/*.swift'
 
-  spec.resource_bundles = { 'Cloudpayments-SDK-iOS' => ['Resources/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}']}
+  spec.resource_bundles = 'Resources/**/*'
 
   spec.requires_arc = true
 
