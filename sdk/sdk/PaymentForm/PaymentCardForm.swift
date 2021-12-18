@@ -55,11 +55,12 @@ public class PaymentCardForm: PaymentForm {
             guard let self = self else {
                 return
             }
-            let parent = self.presentingViewController
+            // let parent = self.presentingViewController
             self.dismiss(animated: true) {
-                if let parent = parent {
-                    PaymentForm.present(with: self.configuration, from: parent)
-                }
+                 self.configuration.paymentUIDelegate.paymentFormDidHide()
+                // if let parent = parent {
+                //     PaymentForm.present(with: self.configuration, from: parent)
+                // }
             }
         }
         

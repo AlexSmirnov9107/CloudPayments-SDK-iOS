@@ -50,7 +50,7 @@ public class PaymentForm: BaseViewController {
     }
     
     @discardableResult
-    private class func showCardForm(with configuration: PaymentConfiguration, from: UIViewController, completion: (() -> ())?) -> PaymentForm {
+    public class func showCardForm(with configuration: PaymentConfiguration, from: UIViewController, completion: (() -> ())?) -> PaymentForm {
         let controller = PaymentCardForm.present(with: configuration, from: from, completion: completion) as! PaymentCardForm
         controller.onPayClicked = { cryptogram, email in
             PaymentProcessForm.present(with: configuration, cryptogram: cryptogram, email: email, from: from, completion: nil)
