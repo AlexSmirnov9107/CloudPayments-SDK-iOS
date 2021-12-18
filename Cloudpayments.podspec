@@ -27,7 +27,7 @@ Pod::Spec.new do |spec|
   spec.source_files  = 'sdk/sdk/**/*.swift'
 
   # spec.resources =  ['sdk/Resources/**/*.{txt,json,png,jpeg,jpg,storyboard,xib,xcassets}']
-  spec.resource_bundles =  {'Cloudpayments'=> ['sdk/Resources/**/*.{txt,json,png,jpeg,jpg,storyboard,xib,xcassets}']}
+  spec.resource_bundles =  {'Cloudpayments'=> ['sdk/Resources/**/*']}
   
   spec.requires_arc = true
 
